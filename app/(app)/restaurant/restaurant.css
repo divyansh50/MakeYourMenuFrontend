@@ -1,0 +1,26 @@
+.restaurant-container{
+    background-color: white;
+    box-shadow:0 2px 6px rgba(0, 0, 0, .08);
+    height:100%
+}
+.res-heading{
+    border-bottom:1px solid lightgrey;
+    padding:10px 15px 10px 15px;
+}
+.res-heading-text{
+    text-align:center;
+}
+.res-heading-button{
+    cursor:pointer;
+    background-color: var(--black-color);
+    color:white;
+    padding: 8px 25px 8px 25px;
+    border-radius:5px;
+}
+
+
+@media (max-width: 767px) {
+    .res-heading{
+        flex-direction: column;
+    }
+}
