@@ -14,7 +14,7 @@ export default function AppLayout({ children }) {
         <div>
             <div className="bg-white h-20 w-full image-header">
                 <div className=" pl-6"><Image src="/restro-theme_logo.jpg" width={width<767?140:180} height={width<767?140:180} alt="Restaurant Logo" /></div>
-                {width<993 && <div><Image src="/default_user.png" width={width<767?45:55} height={width<767?45:55} alt="Default User" className="default-user mr-3" onClick={()=>{setOpenModal((prev)=>!prev)}}/></div>}
+                {width<767 && <div><Image src="/default_user.png" width={width<767?45:55} height={width<767?45:55} alt="Default User" className="default-user mr-3" onClick={()=>{setOpenModal((prev)=>!prev)}}/></div>}
             </div>
             {openModal && (
                 <div className="modal-header">  
