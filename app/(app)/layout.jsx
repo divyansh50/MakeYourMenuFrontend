@@ -12,23 +12,23 @@ export default function AppLayout({ children }) {
     return(
         <div>
             <div className="bg-white h-20 w-full image-header">
-                <div className=" pl-6"><Image src="/restro-theme_logo.jpg" width={180} height={180} alt="Restaurant Logo" /></div>
-                {width<993 && <div><Image src="/default_user.png" width={55} height={55} alt="Default User" className="default-user mr-3" onClick={()=>{setOpenModal((prev)=>!prev)}}/></div>}
+                <div className=" pl-6"><Image src="/restro-theme_logo.jpg" width={width<767?140:180} height={width<767?140:180} alt="Restaurant Logo" /></div>
+                {width<993 && <div><Image src="/default_user.png" width={width<767?45:55} height={width<767?45:55} alt="Default User" className="default-user mr-3" onClick={()=>{setOpenModal((prev)=>!prev)}}/></div>}
             </div>
             {openModal && (
                 <div className="modal-header">  
-                    <div className="modal-items"><Link href="/dashboard">Dashboard</Link></div>
-                    <div className="modal-items"><Link href="/restaurant">Restaurant</Link></div>
-                    <div className="modal-items"><Link href="/menu">Menu</Link></div>
-                    <div className="modal-items"><Link href="/orders">Orders</Link></div>
-                    <div className="modal-items"><Link href="/whatsapp-ordering">Whatsapp Ordering</Link></div>
-                    <div className="modal-items"><Link href="/membership">Membership</Link></div>
-                    <div className="modal-items"><Link href="/account-setting">Account Setting</Link></div>
-                    <div className="modal-items"><Link href="/logout">Logout</Link></div> 
+                    <div className="modal-items"><Link href="/dashboard" onClick={()=>setOpenModal(false)}>Dashboard</Link></div>
+                    <div className="modal-items"><Link href="/restaurant" onClick={()=>setOpenModal(false)}>Restaurant</Link></div>
+                    <div className="modal-items"><Link href="/menu" onClick={()=>setOpenModal(false)}>Menu</Link></div>
+                    <div className="modal-items"><Link href="/orders" onClick={()=>setOpenModal(false)}>Orders</Link></div>
+                    <div className="modal-items"><Link href="/whatsapp-ordering" onClick={()=>setOpenModal(false)}>Whatsapp Ordering</Link></div>
+                    <div className="modal-items"><Link href="/membership" onClick={()=>setOpenModal(false)}>Membership</Link></div>
+                    <div className="modal-items"><Link href="/account-setting" onClick={()=>setOpenModal(false)}>Account Setting</Link></div>
+                    <div className="modal-items"><Link href="/logout" onClick={()=>setOpenModal(false)}>Logout</Link></div> 
                 </div>
             )}
             <div className="flex flex-row flex-container">
-                {width>=993 &&
+                {width>=767 &&
                 <div className="sidebar-container">
                     <Sidebar/>
                 </div>}

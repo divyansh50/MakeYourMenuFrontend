@@ -1,6 +1,7 @@
 import "./Sidebar.css";
 import Link from 'next/link';
-const Sidebar=()=>{
+import { memo } from "react";
+const Sidebar=memo(()=>{
     return(
         <div>
                     <div className="sidebar-heading">Management</div>
@@ -15,5 +16,5 @@ const Sidebar=()=>{
                     <div className="sidebar-items"><Link href="/logout">Logout</Link></div>               
         </div>
     );
-}
+})
 export default Sidebar;

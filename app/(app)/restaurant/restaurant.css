@@ -1,11 +1,13 @@
-.restaurant-container{
+.res-container{
     background-color: white;
     box-shadow:0 2px 6px rgba(0, 0, 0, .08);
-    height:100%
+    height:100%;
+    overflow: auto;
+    
 }
 .res-heading{
     border-bottom:1px solid lightgrey;
-    padding:10px 15px 10px 15px;
+    padding:10px 20px 10px 20px;
 }
 .res-heading-text{
     text-align:center;
@@ -17,8 +19,14 @@
     padding: 8px 25px 8px 25px;
     border-radius:5px;
 }
+.res-content{
+    padding:20px 15px 10px 20px;
+}
 
-
+.res-name-input{
+    border:1px solid lightgray;
+    border-radius:4px;
+}
 @media (max-width: 767px) {
     .res-heading{
         flex-direction: column;
