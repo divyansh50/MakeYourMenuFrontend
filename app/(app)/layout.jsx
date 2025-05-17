@@ -7,7 +7,8 @@ import { useState } from "react";
 import Link from 'next/link';
 
 export default function AppLayout({ children }) {
-    const width= useResize();//custom hook for resposniveness
+    const width= useResize();//custom hook for resposnivenes
+    console.log(width);
     const [openModal,setOpenModal]=useState(false);
     return(
         <div>
